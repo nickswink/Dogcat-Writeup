@@ -45,7 +45,7 @@ The access.log included ip, time, request, and user-agent information. I sent a 
 
 I found a great blog post about log poisoning on apache servers with LFI [here](https://www.hackingarticles.in/apache-log-poisoning-through-lfi/). I used the same metasploit module as well.
 
-[alt text](https://github.com/[nickswink]/[Dogcat-Writeup]/metasploit.png?raw=true)
+[alt text](https://github.com/nickswink/Dogcat-Writeup/metasploit.png?raw=true)
 
 * After this we drop in as user www-data and the first flag is in our current directory. 
 
